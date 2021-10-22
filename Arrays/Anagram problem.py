@@ -8,14 +8,17 @@
 ################################################################
 
 def check_anagram(var_string1, var_string2):
-    var_list_1 = list(var_string1.casefold())
-    var_list_2 = list(var_string2.casefold())
-    if var_list_1.sort() == var_list_2.sort():
-        print("True")
-    else:
+    if len(var_string1) != len(var_string2):
         print("False")
+    else:
+        var_list_1 = list(var_string1.casefold())
+        var_list_2 = list(var_string2.casefold())
+        if var_list_1.sort() == var_list_2.sort():
+            print("True")
+        else:
+            print("False")
 
 if __name__ == "__main__":
     var_string_1 = "Restful"
-    var_string_2 = "fluster"
+    var_string_2 = "Fluster"
     check_anagram(var_string_1, var_string_2)
